@@ -1,0 +1,23 @@
+{
+  "version": "3.0",
+  "port": 5180,
+  "gitRepo": null,
+  "libraries": [
+    {
+      "name": "Community Research Hub",
+      "gitRepo": "https://github.com/mrshaun13/research-hub.git",
+      "browseEnabled": true,
+      "contributeEnabled": false,
+      "confirmEachShare": true
+    }
+  ],
+  "projects": [
+    {
+      "slug": "canister-filter-comparison",
+      "title": "Aquarium Canister Filter Comparison",
+      "createdAt": "2026-02-20T20:48:00Z",
+      "visibility": "public"
+    }
+  ],
+  "collections": []
+}

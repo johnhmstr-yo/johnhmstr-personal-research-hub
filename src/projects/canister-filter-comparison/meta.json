@@ -1,0 +1,78 @@
+{
+  "runStartedAt": "2026-02-20T20:44:00Z",
+  "runCompletedAt": "2026-02-20T20:48:00Z",
+  "durationMinutes": 44,
+  "includedSetup": false,
+  "skillVersion": "7.2.2",
+  "userPrompt": "comparative analysis of aquarium canister filters. Basic criteria/requirements is to focus on filter that are intended for fresh water aquariums between 50 and 150 gallons in size",
+  "researchPlan": "PRODUCT TYPE: Canister Filters for Freshwater Aquariums\nYOUR PROFILE: Freshwater aquarium owner, 50-150 gallon tank size\nPRODUCTS: 14 models across 7 brands\nTIERS: Budget, Mid-Range, Premium, Ultra-Premium\nKEY SPECS: Flow rate (GPH), noise level (dB), media capacity, power consumption, dimensions\nDERIVED METRICS: GPH per dollar, watts per 100 GPH, actual vs rated GPH gap\nFLAGS: Features Matrix ✓, TCO Analysis ✓, Tank Size Fit Guide ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Flow Rate Reality, Value Analysis, Noise & Energy, Features Matrix, Tank Size Fit, Recommendations, Sources",
+  "checkpointModified": false,
+  "model": "Claude 3.5 Sonnet",
+  "tokenUsage": 122000,
+  "searchesPerformed": 8,
+  "sourcesCount": 15,
+  "sectionsBuilt": 9,
+  "chartsBuilt": 6,
+  "filesGenerated": 8,
+  "productsCompared": 14,
+  "dataPointsCollected": 392,
+  "phaseTiming": {
+    "environment": 0,
+    "interpret": 2,
+    "survey": 8,
+    "discover": 6,
+    "research": 12,
+    "analyze": 3,
+    "build": 10,
+    "enrich": 2,
+    "present": 1
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 10.2,
+    "fleschKincaidLabel": "10th Grade",
+    "bloomsLevel": 5,
+    "bloomsLabel": "Evaluate",
+    "bloomsRange": "Understand → Evaluate",
+    "totalWords": 6800
+  },
+  "hoursSaved": {
+    "researchHours": 32,
+    "totalHoursSaved": 142,
+    "equivalentLabel": "~3.5 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 110,
+      "white-paper": 48,
+      "blog-post": 38,
+      "technical-doc": 32,
+      "presentation": 22,
+      "github-repo": 64
+    }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 62,
+    "estimatedLabel": "~1 hr deep read"
+  },
+  "promptComplexity": {
+    "wordCount": 24,
+    "entityCount": 2,
+    "ambiguityScore": 0.2
+  },
+  "sourceDiversityScore": 0.73,
+  "dataQualityDistribution": {
+    "t1": 28,
+    "t2": 156,
+    "t3": 168,
+    "t4": 40
+  },
+  "glossaryMetrics": {
+    "enrichmentRan": true,
+    "termsIdentified": 8,
+    "termsRendered": 8,
+    "categoryBreakdown": {
+      "acronym": 1,
+      "domainJargon": 4,
+      "technicalConcept": 3,
+      "tribalKnowledge": 0
+    }
+  }
+}
