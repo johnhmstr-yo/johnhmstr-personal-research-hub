@@ -18,7 +18,8 @@ export const filters = [
     pros: ['Built-in heater', 'Quietest tested', 'German engineering', 'Easy maintenance'],
     cons: ['Expensive', 'Priming issues reported', 'Air purge problems'],
     bestFor: '40-55 gallon planted tanks with heater needs',
-    rating: 8.9
+    rating: 8.9,
+    purchaseLink: 'https://www.amazon.com/dp/B07DFMWTSW'
   },
   {
     id: 2,
@@ -39,7 +40,8 @@ export const filters = [
     pros: ['Massive media capacity', 'Very quiet for size', 'Simple maintenance', 'Powerful flow'],
     cons: ['Large footprint', 'Hoses difficult to install', 'No spray bar included'],
     bestFor: '100-200 gallon tanks with large fish',
-    rating: 9.3
+    rating: 9.3,
+    purchaseLink: 'https://www.amazon.com/dp/B00NHRW8EA'
   },
   {
     id: 3,
@@ -60,7 +62,8 @@ export const filters = [
     pros: ['Whisper quiet (32dB)', 'Tool-free maintenance', 'Energy efficient', 'Excellent build quality'],
     cons: ['Higher price point', 'Initial priming tricky', 'Large footprint'],
     bestFor: '50-100 gallon community and planted tanks',
-    rating: 9.2
+    rating: 9.2,
+    purchaseLink: 'https://www.amazon.com/dp/B07JFY2QW6'
   },
   {
     id: 4,
@@ -81,7 +84,8 @@ export const filters = [
     pros: ['Compact', 'Energy efficient', 'Quiet operation', 'Easy setup'],
     cons: ['Smaller media capacity', 'Flow reduction with media'],
     bestFor: '40-60 gallon planted tanks',
-    rating: 8.5
+    rating: 8.5,
+    purchaseLink: 'https://www.amazon.com/dp/B07JFY1R9K'
   },
   {
     id: 5,
@@ -102,7 +106,8 @@ export const filters = [
     pros: ['Great media capacity', 'Quiet', 'Reliable', 'Good for 75-150 gal'],
     cons: ['Still large footprint', 'Hose setup challenging'],
     bestFor: '75-150 gallon mixed community',
-    rating: 9.0
+    rating: 9.0,
+    purchaseLink: 'https://www.amazon.com/dp/B00N45GLZQ'
   },
   {
     id: 6,
@@ -123,7 +128,8 @@ export const filters = [
     pros: ['Legendary reliability', 'Very quiet', 'Huge media capacity', 'Lasts 10+ years'],
     cons: ['Manual priming', 'Basic features', 'No quick disconnects'],
     bestFor: '75-125 gallon long-term setups',
-    rating: 8.9
+    rating: 8.9,
+    purchaseLink: 'https://www.amazon.com/dp/B0002AQX7Q'
   },
   {
     id: 7,
@@ -144,7 +150,8 @@ export const filters = [
     pros: ['Very quiet', 'Reliable', 'Compact', 'Low power consumption'],
     cons: ['Manual priming', 'Lower flow rate', 'Basic features'],
     bestFor: '50-75 gallon planted tanks',
-    rating: 8.6
+    rating: 8.6,
+    purchaseLink: 'https://www.amazon.com/dp/B0002AQXTA'
   },
   {
     id: 8,
@@ -165,7 +172,8 @@ export const filters = [
     pros: ['Very quiet', 'Modern features', 'Easy maintenance', 'Quality build'],
     cons: ['Expensive', 'Complex for beginners'],
     bestFor: '60-90 gallon high-end setups',
-    rating: 8.8
+    rating: 8.8,
+    purchaseLink: 'https://www.amazon.com/dp/B01MXDPB0U'
   },
   {
     id: 9,
@@ -186,7 +194,8 @@ export const filters = [
     pros: ['Very affordable', 'Good flow rate', 'Decent media capacity', 'Easy to find'],
     cons: ['Louder operation', 'Build quality concerns', 'May need replacement'],
     bestFor: 'Budget 75-125 gallon setups',
-    rating: 7.5
+    rating: 7.5,
+    purchaseLink: 'https://www.amazon.com/dp/B0002DJ9NU'
   },
   {
     id: 10,
@@ -207,7 +216,8 @@ export const filters = [
     pros: ['Affordable', 'Adequate flow', 'Easy setup'],
     cons: ['Louder', 'Durability questions', 'Plastic construction'],
     bestFor: 'Budget 50-100 gallon tanks',
-    rating: 7.3
+    rating: 7.3,
+    purchaseLink: 'https://www.amazon.com/dp/B0002DJ9OS'
   },
   {
     id: 11,
@@ -228,7 +238,8 @@ export const filters = [
     pros: ['Cheapest option', 'UV sterilizer included', 'High rated GPH'],
     cons: ['Very loud', 'Actual GPH much lower', 'Quality concerns', 'High power use'],
     bestFor: 'Tight budgets, green water issues',
-    rating: 6.8
+    rating: 6.8,
+    purchaseLink: 'https://www.amazon.com/dp/B00CXDRDRA'
   },
   {
     id: 12,
@@ -249,7 +260,8 @@ export const filters = [
     pros: ['Good value', 'Reliable brand', 'Decent flow', 'Easy media changes'],
     cons: ['Moderate noise', 'Basic features', 'Flow bypass issues (older models)'],
     bestFor: '50-90 gallon general purpose',
-    rating: 7.8
+    rating: 7.8,
+    purchaseLink: 'https://www.amazon.com/dp/B010PLGHGE'
   },
   {
     id: 13,
@@ -270,7 +282,8 @@ export const filters = [
     pros: ['Good value', 'Comes with media', 'Decent noise level', 'Reliable'],
     cons: ['Average features', 'Flow rate drops with media', 'Basic build'],
     bestFor: '75-125 gallon community tanks',
-    rating: 7.9
+    rating: 7.9,
+    purchaseLink: 'https://www.amazon.com/dp/B07DJXNQSF'
   },
   {
     id: 14,
@@ -291,7 +304,8 @@ export const filters = [
     pros: ['Very quiet', 'Quality build', 'Energy efficient', 'Good media capacity'],
     cons: ['Expensive', 'Less common brand', 'Limited availability'],
     bestFor: '75-100 gallon quality setups',
-    rating: 8.4
+    rating: 8.4,
+    purchaseLink: 'https://www.amazon.com/dp/B00GGWMWXO'
   },
   {
     id: 15,
@@ -312,7 +326,8 @@ export const filters = [
     pros: ['Compact FX design', 'Very quiet', 'Good media capacity', 'Reliable flow'],
     cons: ['Ribbed hoses', 'No bottom drain', 'Smaller than FX4'],
     bestFor: '75-100 gallon community and planted tanks',
-    rating: 8.7
+    rating: 8.7,
+    purchaseLink: 'https://www.amazon.com/dp/B0BM9NBRW1'
   },
   {
     id: 16,
@@ -333,7 +348,8 @@ export const filters = [
     pros: ['Great value', 'Quiet operation', 'Large media capacity', 'No water bypass'],
     cons: ['Maintenance can be messy', 'Replacement parts scarce', 'Instructions unclear'],
     bestFor: '60-90 gallon value-conscious setups',
-    rating: 8.2
+    rating: 8.2,
+    purchaseLink: 'https://www.amazon.com/dp/B00D5WHC8S'
   },
   {
     id: 17,
@@ -354,7 +370,8 @@ export const filters = [
     pros: ['Excellent value', 'Massive media capacity', 'Powerful flow', 'Quiet for size'],
     cons: ['Higher power consumption', 'Maintenance complexity', 'Limited parts availability'],
     bestFor: '90-150 gallon budget-conscious large tanks',
-    rating: 8.3
+    rating: 8.3,
+    purchaseLink: 'https://www.amazon.com/dp/B00CRIDEJM'
   }
 ];
 

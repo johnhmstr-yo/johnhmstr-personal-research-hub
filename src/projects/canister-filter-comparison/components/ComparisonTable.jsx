@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
+import { ArrowUpDown, ArrowUp, ArrowDown, ShoppingCart } from 'lucide-react';
 
 export default function ComparisonTable({ filters }) {
   const [sortColumn, setSortColumn] = useState('rating');
@@ -44,7 +44,7 @@ export default function ComparisonTable({ filters }) {
       <div>
         <h2 className="text-2xl font-bold text-white mb-4">Head-to-Head Comparison</h2>
         <p className="text-gray-300 leading-relaxed">
-          Complete specifications for all 14 canister filters. Click column headers to sort.
+          Complete specifications for all 17 canister filters. Click column headers to sort. Purchase links go directly to Amazon.
         </p>
       </div>
 
@@ -125,6 +125,9 @@ export default function ComparisonTable({ filters }) {
                     <SortIcon column="rating" />
                   </div>
                 </th>
+                <th className="text-left py-3 px-4 text-gray-400 font-medium">
+                  Purchase
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -163,6 +166,17 @@ export default function ComparisonTable({ filters }) {
                   <td className="py-3 px-4 text-gray-300">{filter.watts}W</td>
                   <td className="py-3 px-4">
                     <span className="text-indigo-400 font-semibold">{filter.rating}/10</span>
+                  </td>
+                  <td className="py-3 px-4">
+                    <a
+                      href={filter.purchaseLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium rounded transition-colors"
+                    >
+                      <ShoppingCart className="w-3.5 h-3.5" />
+                      Buy
+                    </a>
                   </td>
                 </tr>
               ))}
@@ -203,6 +217,16 @@ export default function ComparisonTable({ filters }) {
               <p className="text-xs text-gray-400 mb-1">Best For:</p>
               <p className="text-xs text-gray-300 italic">{filter.bestFor}</p>
             </div>
+
+            <a
+              href={filter.purchaseLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded transition-colors"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              View on Amazon
+            </a>
           </div>
         ))}
       </div>
