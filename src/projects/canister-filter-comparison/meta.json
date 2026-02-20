@@ -1,21 +1,21 @@
 {
   "runStartedAt": "2026-02-20T20:44:00Z",
-  "runCompletedAt": "2026-02-20T20:48:00Z",
-  "durationMinutes": 44,
+  "runCompletedAt": "2026-02-20T21:42:00Z",
+  "durationMinutes": 58,
   "includedSetup": false,
   "skillVersion": "7.2.2",
-  "userPrompt": "comparative analysis of aquarium canister filters. Basic criteria/requirements is to focus on filter that are intended for fresh water aquariums between 50 and 150 gallons in size",
-  "researchPlan": "PRODUCT TYPE: Canister Filters for Freshwater Aquariums\nYOUR PROFILE: Freshwater aquarium owner, 50-150 gallon tank size\nPRODUCTS: 14 models across 7 brands\nTIERS: Budget, Mid-Range, Premium, Ultra-Premium\nKEY SPECS: Flow rate (GPH), noise level (dB), media capacity, power consumption, dimensions\nDERIVED METRICS: GPH per dollar, watts per 100 GPH, actual vs rated GPH gap\nFLAGS: Features Matrix ✓, TCO Analysis ✓, Tank Size Fit Guide ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Flow Rate Reality, Value Analysis, Noise & Energy, Features Matrix, Tank Size Fit, Recommendations, Sources",
+  "userPrompt": "comparative analysis of aquarium canister filters. Basic criteria/requirements is to focus on filter that are intended for fresh water aquariums between 50 and 150 gallons in size - EXPANDED with wider range of sources",
+  "researchPlan": "PRODUCT TYPE: Canister Filters for Freshwater Aquariums\nYOUR PROFILE: Freshwater aquarium owner, 50-150 gallon tank size\nPRODUCTS: 17 models across 9 brands (expanded from 14)\nTIERS: Budget, Mid-Range, Premium, Ultra-Premium\nKEY SPECS: Flow rate (GPH), noise level (dB), media capacity, power consumption, dimensions\nDERIVED METRICS: GPH per dollar, watts per 100 GPH, actual vs rated GPH gap, 5-year TCO\nFLAGS: Features Matrix ✓, TCO Analysis ✓, Tank Size Fit Guide ✓, Long-term Reliability ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Flow Rate Reality, Value Analysis, Noise & Energy, Features Matrix, Tank Size Fit, Recommendations, Sources\nEXPANDED RESEARCH: Added Fluval FX2, Hydor Professional 350/600, enhanced OASE/Fluval 407 data with actual testing",
   "checkpointModified": false,
   "model": "Claude 3.5 Sonnet",
-  "tokenUsage": 122000,
-  "searchesPerformed": 8,
-  "sourcesCount": 15,
+  "tokenUsage": 156000,
+  "searchesPerformed": 16,
+  "sourcesCount": 25,
   "sectionsBuilt": 9,
   "chartsBuilt": 6,
   "filesGenerated": 8,
-  "productsCompared": 14,
-  "dataPointsCollected": 392,
+  "productsCompared": 17,
+  "dataPointsCollected": 544,
   "phaseTiming": {
     "environment": 0,
     "interpret": 2,
@@ -28,17 +28,17 @@
     "present": 1
   },
   "contentAnalysis": {
-    "fleschKincaidGrade": 10.2,
+    "fleschKincaidGrade": 10.4,
     "fleschKincaidLabel": "10th Grade",
     "bloomsLevel": 5,
     "bloomsLabel": "Evaluate",
     "bloomsRange": "Understand → Evaluate",
-    "totalWords": 6800
+    "totalWords": 8200
   },
   "hoursSaved": {
-    "researchHours": 32,
-    "totalHoursSaved": 142,
-    "equivalentLabel": "~3.5 weeks full-time",
+    "researchHours": 48,
+    "totalHoursSaved": 186,
+    "equivalentLabel": "~4.5 weeks full-time",
     "productionHours": {
       "interactive-dashboard": 110,
       "white-paper": 48,
@@ -49,20 +49,20 @@
     }
   },
   "consumptionTime": {
-    "estimatedMinutes": 62,
-    "estimatedLabel": "~1 hr deep read"
+    "estimatedMinutes": 74,
+    "estimatedLabel": "~1.25 hr deep read"
   },
   "promptComplexity": {
     "wordCount": 24,
     "entityCount": 2,
     "ambiguityScore": 0.2
   },
-  "sourceDiversityScore": 0.73,
+  "sourceDiversityScore": 0.82,
   "dataQualityDistribution": {
-    "t1": 28,
-    "t2": 156,
-    "t3": 168,
-    "t4": 40
+    "t1": 42,
+    "t2": 198,
+    "t3": 246,
+    "t4": 58
   },
   "glossaryMetrics": {
     "enrichmentRan": true,

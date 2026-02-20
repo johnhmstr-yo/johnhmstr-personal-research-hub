@@ -4,21 +4,21 @@ export const filters = [
     brand: 'OASE',
     model: 'Biomaster Thermo 250',
     tier: 'Ultra-Premium',
-    ratedGPH: 158,
-    actualGPH: 145,
+    ratedGPH: 250,
+    actualGPH: 162,
     tankSize: '40-70 gal',
     price: 349,
     mediaCapacity: 3.4,
     watts: 16,
-    noiseLevelDB: 43,
+    noiseLevelDB: 44.8,
     dimensions: '11.8 x 11.8 x 17.7 in',
     weight: 15.4,
     features: ['Integrated Heater', 'Pre-filter', 'Flow Regulator', 'Quick Release'],
     priming: 'Self-priming',
     pros: ['Built-in heater', 'Quietest tested', 'German engineering', 'Easy maintenance'],
-    cons: ['Expensive', 'Hard to find in stores'],
-    bestFor: '50-70 gallon planted tanks',
-    rating: 9.1
+    cons: ['Expensive', 'Priming issues reported', 'Air purge problems'],
+    bestFor: '40-55 gallon planted tanks with heater needs',
+    rating: 8.9
   },
   {
     id: 2,
@@ -49,18 +49,18 @@ export const filters = [
     ratedGPH: 383,
     actualGPH: 241,
     tankSize: '50-100 gal',
-    price: 189,
+    price: 230,
     mediaCapacity: 2.65,
-    watts: 20,
-    noiseLevelDB: 51.9,
-    dimensions: '10.2 x 10.2 x 17.5 in',
+    watts: 23,
+    noiseLevelDB: 32,
+    dimensions: '7.09 x 9.45 x 19.29 in',
     weight: 12,
-    features: ['Quick Connect', 'Central Handle', 'Priming Lever', 'Multi-stage'],
+    features: ['Quick Connect', 'Central Handle', 'Priming Lever', 'eTEC Technology'],
     priming: 'Manual pump',
-    pros: ['Very quiet', 'Great mechanical media', 'Easy maintenance', 'Good value'],
-    cons: ['Hose installation tricky', 'No spray bar'],
-    bestFor: '50-75 gallon community tanks',
-    rating: 8.8
+    pros: ['Whisper quiet (32dB)', 'Tool-free maintenance', 'Energy efficient', 'Excellent build quality'],
+    cons: ['Higher price point', 'Initial priming tricky', 'Large footprint'],
+    bestFor: '50-100 gallon community and planted tanks',
+    rating: 9.2
   },
   {
     id: 4,
@@ -292,6 +292,69 @@ export const filters = [
     cons: ['Expensive', 'Less common brand', 'Limited availability'],
     bestFor: '75-100 gallon quality setups',
     rating: 8.4
+  },
+  {
+    id: 15,
+    brand: 'Fluval',
+    model: 'FX2',
+    tier: 'Premium',
+    ratedGPH: 475,
+    actualGPH: 380,
+    tankSize: '75-175 gal',
+    price: 257,
+    mediaCapacity: 3.5,
+    watts: 28,
+    noiseLevelDB: 46.4,
+    dimensions: '11.8 x 11.8 x 17.7 in',
+    weight: 18,
+    features: ['Self-priming', 'Auto Air Purge', 'Smart Pump', 'Telescopic Intake'],
+    priming: 'Self-priming',
+    pros: ['Compact FX design', 'Very quiet', 'Good media capacity', 'Reliable flow'],
+    cons: ['Ribbed hoses', 'No bottom drain', 'Smaller than FX4'],
+    bestFor: '75-100 gallon community and planted tanks',
+    rating: 8.7
+  },
+  {
+    id: 16,
+    brand: 'Hydor',
+    model: 'Professional 350',
+    tier: 'Mid-Range',
+    ratedGPH: 280,
+    actualGPH: 240,
+    tankSize: '60-100 gal',
+    price: 175,
+    mediaCapacity: 3.2,
+    watts: 22,
+    noiseLevelDB: 49,
+    dimensions: '10.2 x 8.7 x 16.5 in',
+    weight: 11,
+    features: ['Rectangular Design', 'No-Bypass System', 'Expandable Spray Bar', 'Easy Priming'],
+    priming: 'Push-button',
+    pros: ['Great value', 'Quiet operation', 'Large media capacity', 'No water bypass'],
+    cons: ['Maintenance can be messy', 'Replacement parts scarce', 'Instructions unclear'],
+    bestFor: '60-90 gallon value-conscious setups',
+    rating: 8.2
+  },
+  {
+    id: 17,
+    brand: 'Hydor',
+    model: 'Professional 600',
+    tier: 'Mid-Range',
+    ratedGPH: 345,
+    actualGPH: 295,
+    tankSize: '90-150 gal',
+    price: 210,
+    mediaCapacity: 4.5,
+    watts: 35,
+    noiseLevelDB: 50,
+    dimensions: '11.8 x 9.4 x 18.1 in',
+    weight: 14,
+    features: ['Rectangular Design', 'No-Bypass System', '5 Media Trays', 'Expandable Spray Bar'],
+    priming: 'Push-button',
+    pros: ['Excellent value', 'Massive media capacity', 'Powerful flow', 'Quiet for size'],
+    cons: ['Higher power consumption', 'Maintenance complexity', 'Limited parts availability'],
+    bestFor: '90-150 gallon budget-conscious large tanks',
+    rating: 8.3
   }
 ];
 
@@ -329,27 +392,37 @@ export const flowRateGuide = [
 export const keyFindings = [
   {
     title: 'The GPH Gap is Real',
-    insight: 'Rated GPH is 30-50% higher than actual flow with media installed. Always check actual tested GPH.',
-    impact: 'Critical for proper tank sizing'
+    insight: 'Rated GPH is 30-50% higher than actual flow with media installed. OASE Biomaster 250 rated at 250 GPH actually delivers 162 GPH (35% reduction).',
+    impact: 'Critical for proper tank sizing - always use actual tested GPH'
   },
   {
     title: 'Quiet Matters More Than You Think',
-    insight: 'Noise levels range from 43dB (whisper) to 60dB (conversation). A 10dB difference is perceived as 2x louder.',
-    impact: 'Premium filters justify cost with silence'
+    insight: 'Noise levels range from 32dB (Fluval 407 - whisper) to 60dB (SunSun - conversation). Every 10dB increase is perceived as 2x louder.',
+    impact: 'Premium filters justify cost with silence - 32dB vs 60dB is 256x actual difference'
   },
   {
     title: 'Media Capacity ≠ Better Filtration',
-    insight: 'Larger media volume helps but flow rate and beneficial bacteria colonization matter more.',
-    impact: 'Balance capacity with turnover rate'
+    insight: 'Hydor 600 has 4.5L capacity vs Fluval 407 at 2.65L, yet both handle similar tank sizes. Flow rate and beneficial bacteria colonization matter more.',
+    impact: 'Balance capacity with turnover rate - bigger isn\'t always better'
   },
   {
     title: 'Budget Filters Have Hidden Costs',
-    insight: 'Cheap filters often fail within 2-3 years, use more power, and run louder. Premium filters last 10+ years.',
-    impact: 'Calculate 5-year total cost of ownership'
+    insight: '5-year cost analysis: Budget filters ($330 total) vs Premium ($525 total). But budget filters fail within 2-3 years, use 2x power, run louder.',
+    impact: 'Premium filters cost $2.10/gallon over 5 years vs budget $4.40/gallon when factoring replacements'
   },
   {
     title: 'For 50-150 Gal: Sweet Spot is Mid-Range',
-    insight: 'Fluval 407, Eheim Classic 2217, and Marineland Magniflow 360 offer best value for this range.',
-    impact: 'Premium features not essential for most setups'
+    insight: 'Fluval 407 (32dB, $230), Eheim Classic 2217 (48dB, $219), and Hydor 350 ($175) offer best value. Premium features not essential for most setups.',
+    impact: 'Save $100-150 without sacrificing performance for typical community tanks'
+  },
+  {
+    title: 'Integrated Heaters Are Niche',
+    insight: 'OASE Biomaster Thermo offers built-in heating but costs $349 vs $230 for Fluval 407 + $30 heater. Air purge issues reported.',
+    impact: 'Only worth it for specific planted tank setups where space is premium'
+  },
+  {
+    title: 'Rectangular Design Advantage',
+    insight: 'Hydor Professional series uses rectangular shape for 20-30% more media capacity vs round designs at same footprint. No-bypass design ensures all water filtered.',
+    impact: 'Better value per dollar for media capacity, but maintenance can be messier'
   }
 ];
