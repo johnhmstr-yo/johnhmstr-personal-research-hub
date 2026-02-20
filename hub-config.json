@@ -1,7 +1,7 @@
 {
   "version": "3.0",
   "port": 5180,
-  "gitRepo": null,
+  "gitRepo": "https://github.com/johnhmstr-yo/johnhmstr-personal-research-hub.git",
   "libraries": [
     {
       "name": "Community Research Hub",
