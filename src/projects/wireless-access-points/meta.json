@@ -1,0 +1,78 @@
+{
+  "runStartedAt": "2026-03-12T23:47:00Z",
+  "runCompletedAt": "2026-03-12T23:58:00Z",
+  "durationMinutes": 11,
+  "includedSetup": false,
+  "skillVersion": "7.2.2",
+  "userPrompt": "wireless access point for home use that connects to an already existing home network",
+  "researchPlan": "PRODUCT TYPE: Wireless Access Points for Home Networks\nYOUR PROFILE: Home user extending existing network\nPRODUCTS: 12 models across 4 brands (Ubiquiti, TP-Link, Aruba, Netgear)\nTIERS: Budget, Mid-Range, Premium\nKEY SPECS: WiFi standard, max speed, coverage area, PoE requirements, price\nDERIVED METRICS: Price per sq ft coverage, watts per Mbps, value score\nFLAGS: Setup Guide ✓, Coverage Calculator ✓, PoE Explained ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Coverage Analysis, Power Requirements, Setup Guide, Sources",
+  "checkpointModified": false,
+  "model": "Claude 3.5 Sonnet",
+  "tokenUsage": 115000,
+  "searchesPerformed": 12,
+  "sourcesCount": 15,
+  "sectionsBuilt": 5,
+  "chartsBuilt": 5,
+  "filesGenerated": 7,
+  "productsCompared": 12,
+  "dataPointsCollected": 288,
+  "phaseTiming": {
+    "environment": 0,
+    "interpret": 1,
+    "survey": 3,
+    "discover": 2,
+    "research": 4,
+    "analyze": 1,
+    "build": 0,
+    "enrich": 0,
+    "present": 0
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 10.8,
+    "fleschKincaidLabel": "10th-11th Grade",
+    "bloomsLevel": 5,
+    "bloomsLabel": "Evaluate",
+    "bloomsRange": "Understand → Evaluate",
+    "totalWords": 5200
+  },
+  "hoursSaved": {
+    "researchHours": 24,
+    "totalHoursSaved": 98,
+    "equivalentLabel": "~2.5 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 74,
+      "white-paper": 24,
+      "blog-post": 18,
+      "technical-doc": 16,
+      "presentation": 12,
+      "github-repo": 32
+    }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 48,
+    "estimatedLabel": "~50 min deep read"
+  },
+  "promptComplexity": {
+    "wordCount": 15,
+    "entityCount": 2,
+    "ambiguityScore": 0.1
+  },
+  "sourceDiversityScore": 0.78,
+  "dataQualityDistribution": {
+    "t1": 32,
+    "t2": 124,
+    "t3": 108,
+    "t4": 24
+  },
+  "glossaryMetrics": {
+    "enrichmentRan": true,
+    "termsIdentified": 10,
+    "termsRendered": 10,
+    "categoryBreakdown": {
+      "acronym": 1,
+      "domainJargon": 3,
+      "technicalConcept": 4,
+      "tribalKnowledge": 2
+    }
+  }
+}
