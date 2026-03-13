@@ -6,6 +6,7 @@ import GlossaryTerm from './components/GlossaryTerm';
 import { accessPoints, tierInfo, coverageGuide, keyFindings } from './data/accessPointData';
 import { sources } from './data/sources';
 import { glossaryTerms } from './data/glossaryTerms';
+import { chipsetComparison, performanceByUseCase, realWorldSpeedAnalysis, costAnalysis, reliabilityMetrics, upgradePathAnalysis } from './data/advancedAnalysis';
 
 export default function WirelessAccessPointsApp() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -13,7 +14,8 @@ export default function WirelessAccessPointsApp() {
   const tabs = [
     { id: 'overview', label: 'Overview', icon: Home },
     { id: 'comparison', label: 'Comparison', icon: TrendingUp },
-    { id: 'analysis', label: 'Analysis', icon: Zap },
+    { id: 'analysis', label: 'Performance Analysis', icon: Zap },
+    { id: 'deep-dive', label: 'Deep Dive', icon: TrendingUp },
     { id: 'guide', label: 'Setup Guide', icon: BookOpen },
     { id: 'sources', label: 'Sources', icon: ExternalLink }
   ];
@@ -288,6 +290,236 @@ export default function WirelessAccessPointsApp() {
                         </span>
                       ))}
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'deep-dive' && (
+          <div className="space-y-8">
+            {/* Chipset Comparison */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">Chipset Manufacturer Analysis</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                {chipsetComparison.map((chip, idx) => (
+                  <div key={idx} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="font-semibold text-white text-lg">{chip.manufacturer}</h3>
+                      <span className="text-cyan-400 text-sm">{chip.marketShare}% share</span>
+                    </div>
+                    <div className="space-y-2 mb-3 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Avg Real Speed:</span>
+                        <span className="text-white">{chip.avgRealWorldSpeed} Mbps</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Avg Efficiency:</span>
+                        <span className="text-white">{chip.avgEfficiency}/10</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Avg Price:</span>
+                        <span className="text-white">${chip.avgPrice}</span>
+                      </div>
+                    </div>
+                    <div className="border-t border-gray-700 pt-3 mb-3">
+                      <p className="text-xs text-gray-400 mb-1">Models:</p>
+                      <div className="flex flex-wrap gap-1">
+                        {chip.models.slice(0, 3).map((model, midx) => (
+                          <span key={midx} className="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">
+                            {model}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="border-t border-gray-700 pt-3">
+                      <p className="text-xs text-green-400 mb-1">✓ {chip.pros[0]}</p>
+                      <p className="text-xs text-amber-400">⚠ {chip.cons[0]}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Performance by Use Case */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">Recommended by Use Case</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {performanceByUseCase.map((useCase, idx) => (
+                  <div key={idx} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <h3 className="font-semibold text-white mb-1">{useCase.useCase}</h3>
+                    <p className="text-gray-400 text-sm mb-3">{useCase.description}</p>
+                    <div className="space-y-2 mb-3 text-xs">
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Min Speed:</span>
+                        <span className="text-cyan-400">{useCase.minSpeed} Mbps</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Min Clients:</span>
+                        <span className="text-cyan-400">{useCase.minClients}</span>
+                      </div>
+                    </div>
+                    <div className="border-t border-gray-700 pt-3 mb-2">
+                      <p className="text-xs text-gray-400 mb-1">Recommended:</p>
+                      <div className="flex flex-wrap gap-1">
+                        {useCase.recommended.map((model, midx) => (
+                          <span key={midx} className="text-xs bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded border border-cyan-500/20">
+                            {model}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-400 italic mt-2">{useCase.reasoning}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Real-World Speed Analysis */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">Real-World Speed Retention</h2>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  {realWorldSpeedAnalysis.speedRetention.map((tier, idx) => (
+                    <div key={idx} className="bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-center">
+                      <h3 className="font-semibold text-white mb-2">{tier.tier}</h3>
+                      <div className="text-3xl font-bold text-cyan-400 mb-1">{tier.avgRetention}%</div>
+                      <p className="text-xs text-gray-400">{tier.range} of rated speed</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-gray-700 pt-4">
+                  <h3 className="font-semibold text-white mb-3">Factors Affecting Real-World Speed</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {realWorldSpeedAnalysis.factorsAffecting.map((factor, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
+                        <span className={`text-xs font-semibold px-2 py-1 rounded ${
+                          factor.impact === 'High' ? 'bg-red-500/10 text-red-400' :
+                          factor.impact === 'Medium' ? 'bg-amber-500/10 text-amber-400' :
+                          'bg-green-500/10 text-green-400'
+                        }`}>
+                          {factor.impact}
+                        </span>
+                        <div className="flex-1">
+                          <p className="text-sm text-white font-medium">{factor.factor}</p>
+                          <p className="text-xs text-gray-400">{factor.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-4 p-3 bg-cyan-500/5 border border-cyan-500/20 rounded">
+                  <p className="text-xs text-gray-300">
+                    <strong>Testing Methodology:</strong> {realWorldSpeedAnalysis.testingMethodology}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Total Cost of Ownership */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">5-Year Total Cost of Ownership</h2>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-6">
+                <div className="overflow-x-auto mb-4">
+                  <table className="w-full text-sm">
+                    <thead className="bg-gray-900/50 border-b border-gray-700">
+                      <tr>
+                        <th className="text-left py-2 px-3 text-gray-400 font-medium">Model</th>
+                        <th className="text-right py-2 px-3 text-gray-400 font-medium">AP Cost</th>
+                        <th className="text-right py-2 px-3 text-gray-400 font-medium">PoE</th>
+                        <th className="text-right py-2 px-3 text-gray-400 font-medium">Subscription/5yr</th>
+                        <th className="text-right py-2 px-3 text-gray-400 font-medium">Total</th>
+                        <th className="text-right py-2 px-3 text-gray-400 font-medium">$/sq ft</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {costAnalysis.totalCostOfOwnership.map((item, idx) => (
+                        <tr key={idx} className={`border-b border-gray-800 ${idx % 2 === 0 ? 'bg-gray-900/20' : ''}`}>
+                          <td className="py-2 px-3 text-white font-medium">{item.model}</td>
+                          <td className="py-2 px-3 text-right text-gray-300">${item.apCost}</td>
+                          <td className="py-2 px-3 text-right text-gray-300">${item.poeCost}</td>
+                          <td className="py-2 px-3 text-right text-gray-300">${item.subscriptionYearly * 5}</td>
+                          <td className="py-2 px-3 text-right text-cyan-400 font-semibold">${item.year5Total}</td>
+                          <td className="py-2 px-3 text-right text-gray-300">${item.costPerSqFt.toFixed(3)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="border-t border-gray-700 pt-4">
+                  <h3 className="font-semibold text-white mb-2">Hidden Costs to Consider</h3>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {costAnalysis.hiddenCosts.map((cost, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-start gap-2">
+                        <span className="text-amber-400">•</span>
+                        <span>{cost}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Reliability Metrics */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">Reliability & Longevity Metrics</h2>
+              <div className="grid grid-cols-1 gap-4">
+                {reliabilityMetrics.map((metric, idx) => (
+                  <div key={idx} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="font-semibold text-white">{metric.metric}</h3>
+                        <p className="text-sm text-gray-400">{metric.description}</p>
+                      </div>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        metric.importance === 'High' ? 'bg-red-500/10 text-red-400' :
+                        'bg-amber-500/10 text-amber-400'
+                      }`}>
+                        {metric.importance}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                      <div>
+                        <p className="text-gray-400 text-xs mb-1">Budget</p>
+                        <p className="text-white">{metric.budget}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-400 text-xs mb-1">Mid-Range</p>
+                        <p className="text-white">{metric.midRange}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-400 text-xs mb-1">Premium</p>
+                        <p className="text-white">{metric.premium}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Upgrade Path Analysis */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">Upgrade Path Recommendations</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {upgradePathAnalysis.map((path, idx) => (
+                  <div key={idx} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-semibold text-white">{path.currentSetup}</h3>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        path.difficulty === 'Easy' ? 'bg-green-500/10 text-green-400' :
+                        path.difficulty === 'Moderate' ? 'bg-amber-500/10 text-amber-400' :
+                        'bg-red-500/10 text-red-400'
+                      }`}>
+                        {path.difficulty}
+                      </span>
+                    </div>
+                    <div className="mb-3">
+                      <p className="text-sm text-cyan-400 font-medium">→ {path.upgradeOption}</p>
+                      <p className="text-xs text-gray-400 mt-1">{path.cost}</p>
+                    </div>
+                    <p className="text-sm text-gray-300 mb-2">{path.benefit}</p>
+                    <p className="text-xs text-gray-400 italic">💡 {path.recommendation}</p>
                   </div>
                 ))}
               </div>
